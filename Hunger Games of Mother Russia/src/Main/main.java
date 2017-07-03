@@ -11,5 +11,6 @@ public class main {
 		System.out.println("Russian version of hello world");
 		String str = sc.nextLine();
 		System.out.println("Vous avez tapez : " + str);
+		//useless
 	}
 }
