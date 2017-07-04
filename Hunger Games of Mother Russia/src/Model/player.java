@@ -5,4 +5,6 @@ public interface player {
 	public void setHp(int hp);
 	public int getAp();
 	public void setAp(int ap);
+	public String getName();
+	public void setName(String name);
 }
