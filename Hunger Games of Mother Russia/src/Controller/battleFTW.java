@@ -11,16 +11,14 @@ public class battleFTW {
 	player you;
 	player ia;
 	private boolean end = false;
-
+	jarvis friday = new jarvis();
 	
 	public void letsDance() {
 		System.out.println("Choisissez votre personnage (1 = damager, 2 = healer, 3 = tank)");
-		
 		choice = sc.nextInt();
 		you = choix(choice);
 		
 		System.out.println("Choisissez le personnage de l'IA (1 = damager, 2 = healer, 3 = tank)");
-		
 		choice = sc.nextInt();
 		ia = choix(choice);
 		
@@ -44,9 +42,7 @@ public class battleFTW {
 				break;
 			}
 			
-			if(you.getHp() <= 0 || ia.getHp() <= 0){
-				end = true;
-			}
+			end = friday.whatNow(you.getHp(), ia.getHp(), "yo");
 		}
 	}
 	private player choix (int i){
