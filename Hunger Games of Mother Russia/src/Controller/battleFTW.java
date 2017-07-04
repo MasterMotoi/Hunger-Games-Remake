@@ -5,8 +5,7 @@ import java.util.Scanner;
 import Model.*;
 
 public class battleFTW {
-	private int choice;
-	private String action;
+	private String choice;
 	Scanner sc = new Scanner(System.in);
 	player you;
 	player ia;
@@ -14,22 +13,22 @@ public class battleFTW {
 	jarvis friday = new jarvis();
 	
 	public void letsDance() {
-		System.out.println("Choisissez votre personnage (1 = damager, 2 = healer, 3 = tank)");
-		choice = sc.nextInt();
+		System.out.println("Choisissez votre personnage (damager, healer, tank)");
+		choice = sc.nextLine();
 		you = choix(choice);
 		
-		System.out.println("Choisissez le personnage de l'IA (1 = damager, 2 = healer, 3 = tank)");
-		choice = sc.nextInt();
+		System.out.println("Choisissez le personnage de l'IA (damager, healer, tank)");
+		choice = sc.nextLine();
 		ia = choix(choice);
 		
 		System.out.println("Votre classe est " + you.getName() + ". Vos HP sont " + you.getHp() + ". Vos AP sont " + you.getAp() + ".");
-		System.out.println("La classe de l'ia est " + ia.getName() + ". Vos HP sont " + ia.getHp() + ". Vos AP sont " + ia.getAp() + ".");
+		System.out.println("La classe de l'ia est " + ia.getName() + ". Ses HP sont " + ia.getHp() + ". Ses AP sont " + ia.getAp() + ".");
 		
 		while (end == false){
-			System.out.println("What do you want to do, attack or block or kill enemy or suicide?");
-			action = sc.nextLine();
+			System.out.println("What do you want to do, attack or block ?");
+			choice = sc.nextLine();
 
-			switch (action) {
+			switch (choice) {
 			
 			case "attack":
 				System.out.println("You attack the ennemy");
@@ -45,18 +44,18 @@ public class battleFTW {
 			end = friday.whatNow(you.getHp(), ia.getHp(), "yo");
 		}
 	}
-	private player choix (int i){
+	private player choix (String i){
 		player dude;
 		switch (i){
 		
-		case 1:
+		case "damager":
 			dude = new damager();
 			break;
 			
-		case 2:
+		case "healer":
 			dude = new healer();
 			break;
-		case 3:
+		case "tank":
 			dude = new tank();
 			break;
 		
