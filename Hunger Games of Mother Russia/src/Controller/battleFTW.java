@@ -14,15 +14,15 @@ public class battleFTW {
 	
 	public void letsDance() {
 		System.out.println("Choisissez votre personnage (damager, healer, tank)");
-		choice = sc.nextLine();
-		you = choix(choice);
+		//choice = sc.nextLine();
+		you = choix("damager");
 		
 		System.out.println("Choisissez le personnage de l'IA (damager, healer, tank)");
-		choice = sc.nextLine();
-		ia = choix(choice);
+		//choice = sc.nextLine();
+		ia = choix("tank");
 		
-		System.out.println("Votre classe est " + you.getName() + ". Vos HP sont " + you.getHp() + ". Vos AP sont " + you.getAp() + ".");
-		System.out.println("La classe de l'ia est " + ia.getName() + ". Ses HP sont " + ia.getHp() + ". Ses AP sont " + ia.getAp() + ".");
+		System.out.println("\nVotre classe est " + you.getName() + ". Vos HP sont " + you.getHp() + " et vos AP sont " + you.getAp() + ".");
+		System.out.println("La classe de l'ia est " + ia.getName() + ". Ses HP sont " + ia.getHp() + " et ses AP sont " + ia.getAp() + ".\n");
 		
 		while (end == false){
 			System.out.println("What do you want to do, attack or block ?");
@@ -32,16 +32,16 @@ public class battleFTW {
 			
 			case "attack":
 				System.out.println("You attack the ennemy");
-				ia.setHp(ia.getHp()-1);
 				break;
 			
 			case "block":
 				System.out.println("You block the attack of the ennemy");
-				you.setHp(you.getHp()-1);
 				break;
 			}
 			
-			end = friday.whatNow(you.getHp(), ia.getHp(), "yo");
+			end = friday.whatNow(you.getHp(), you.getAp(), ia.getHp(), ia.getAp(), choice);
+			you.setHp(friday.getHpPlayer());
+			ia.setHp(friday.getHpFriday());
 		}
 	}
 	private player choix (String i){
