@@ -11,4 +11,6 @@ public interface player {
 	public String getName(); // Same
 	public void setName(String name); // Same
 	public int getDp(); // Same
+	public String getSprite(); // Same
+	public void setSprite(String sprite); // Same
 }
