@@ -3,6 +3,7 @@ package Model;
 public class damager implements player{
 	protected int hp = 15;
 	protected int ap = 3;
+	protected int dp = 1;
 	private String name = "Damager"; 
 	
 	public void special (int apEnnemy) {
@@ -37,5 +38,9 @@ public class damager implements player{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public int getDp(){
+		return dp;
 	}
 }

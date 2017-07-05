@@ -8,4 +8,5 @@ public interface player {
 	public void setAp(int ap);
 	public String getName();
 	public void setName(String name);
+	public int getDp();
 }

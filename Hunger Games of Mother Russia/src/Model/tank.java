@@ -3,11 +3,11 @@ package Model;
 public class tank implements player{
 	protected int hp = 18;
 	protected int ap = 2;
+	protected int dp = 0;
 	private String name = "Tank"; 
 	
 	public void special (int apEnnemy) {
-		hp = hp + apEnnemy;
-		System.out.println("You take no damage\n");
+		System.out.println("Nothing to see here, but you take no damage when you block\n");
 	}
 	
 	public int getHp() {
@@ -37,5 +37,9 @@ public class tank implements player{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public int getDp(){
+		return dp;
 	}
 }

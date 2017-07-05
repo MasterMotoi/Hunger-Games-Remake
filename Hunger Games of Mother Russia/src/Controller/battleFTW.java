@@ -50,9 +50,7 @@ public class battleFTW {
 				break;
 			}
 			
-			end = friday.whatNow(you.getHp(), you.getAp(), ia.getHp(), ia.getAp(), choice, ia);
-			you.setHp(friday.getHpPlayer());
-			ia.setHp(friday.getHpFriday());
+			end = friday.whatNow(choice, ia, you);
 		}
 	}
 	private player choix (String i){
