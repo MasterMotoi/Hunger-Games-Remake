@@ -1,22 +1,27 @@
 package Model;
 
 public class healer implements player{
-	protected int hp = 12;
-	protected int ap = 3;
-	protected int dp = 1;
-	private String name = "Healer"; 
+	protected int hp = 12; // The hp (health point) are your life you have left.
+	protected int ap = 3; // The ap (attack point) are the damage you'll make when you attack
+	protected int dp = 1; // The dp (defense point) are the damage you'll take when you block an attack
+	private String name = "Healer";  // name is the name of the class
 	
-	public void special (int apEnnemy){
-		if (hp<=5){
-			System.out.println("You regain 3 hp.\n");
-			hp = hp + 3;
+	public void special (){
+		if (hp<=5){ // The healer can heal himself only if he have 5 hp left or less
+			System.out.println("You regain 3 hp.\n"); // The user is warned
+			hp = hp + 3; // If he can, the healer give himself 3 hp back
 		}
 		
 		else{
-			System.out.println("You're in too good shape.\n");
+			System.out.println("You're in too good shape.\n"); // The user is warned
 		}
 	}
 	
+	/*
+	 * 
+	 * Getters and Setters
+	 * 
+	 */
 	
 	public int getHp() {
 		return hp;
@@ -50,4 +55,10 @@ public class healer implements player{
 	public int getDp(){
 		return dp;
 	}
+	
+	/*
+	 * 
+	 * 'Till here
+	 * 
+	 */
 }

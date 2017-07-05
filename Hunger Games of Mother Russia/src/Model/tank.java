@@ -1,14 +1,20 @@
 package Model;
 
 public class tank implements player{
-	protected int hp = 18;
-	protected int ap = 2;
-	protected int dp = 0;
-	private String name = "Tank"; 
+	protected int hp = 18; // The hp (health point) are your life you have left.
+	protected int ap = 2; // The ap (attack point) are the damage you'll make when you attack
+	protected int dp = 0; // The dp (defense point) are the damage you'll take when you block an attack
+	private String name = "Tank";  // name is the name of the class
 	
-	public void special (int apEnnemy) {
-		System.out.println("Nothing to see here, but you take no damage when you block\n");
+	public void special () {
+		System.out.println("Nothing to see here, but you take no damage when you block\n"); // The special does nothing cause it's passive. The tank take no damage when he block an attack
 	}
+	
+	/*
+	 * 
+	 * Getters and Setters
+	 * 
+	 */
 	
 	public int getHp() {
 		return hp;
@@ -42,4 +48,10 @@ public class tank implements player{
 	public int getDp(){
 		return dp;
 	}
+	
+	/*
+	 * 
+	 * 'Till here
+	 * 
+	 */
 }

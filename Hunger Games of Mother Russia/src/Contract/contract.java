@@ -1,14 +1,15 @@
 package Contract;
 
-import java.util.Scanner;
-
 import Controller.*;
 
 public class contract {
-	Scanner sc = new Scanner(System.in);
+	private boolean end = false;
 	battleFTW fight = new battleFTW();
 	
 	public void start(){
-		fight.letsDance();
+		fight.initiation();
+		while (end == false){
+			end = fight.letsDance();
+		}
 	}
 }
