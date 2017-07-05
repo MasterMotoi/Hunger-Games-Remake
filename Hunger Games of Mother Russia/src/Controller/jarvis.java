@@ -1,13 +1,17 @@
 package Controller;
 
+import Model.player;
+
 public class jarvis {
 	private boolean end;
 	private int hpPlayer;
 	private int hpFriday;
 	
-	public boolean whatNow (int hpPlay, int apPlay, int hpIa, int apIa, String action){
-		int actionIa = (int)(Math.random() * 2);
+	public boolean whatNow (int hpPlay, int apPlay, int hpIa, int apIa, String action, player friday){
+		int actionIa = (int)(Math.random() * 3);
+		actionIa=2;
 		String testAction = "attack";
+		
 		
 		switch (actionIa){
 			case 0:
@@ -28,6 +32,12 @@ public class jarvis {
 				}
 				System.out.println("The ennemy blocked your attack\n");
 				break;
+			
+			case 2:
+				System.out.println("The ennemy uses his special power.");
+				friday.special(apPlay);
+				break;
+				
 		}
 		
 		if (action.equals(testAction)){

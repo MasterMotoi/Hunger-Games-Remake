@@ -1,6 +1,7 @@
 package Model;
 
 public interface player {
+	public void special(int apEnnemy);
 	public int getHp();
 	public void setHp(int hp);
 	public int getAp();

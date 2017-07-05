@@ -1,9 +1,14 @@
 package Model;
 
 public class tank implements player{
-	protected int hp = 5;
-	protected int ap = 1;
+	protected int hp = 18;
+	protected int ap = 2;
 	private String name = "Tank"; 
+	
+	public void special (int apEnnemy) {
+		hp = hp + apEnnemy;
+		System.out.println("You take no damage\n");
+	}
 	
 	public int getHp() {
 		return hp;

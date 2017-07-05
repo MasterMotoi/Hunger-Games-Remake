@@ -1,9 +1,21 @@
 package Model;
 
 public class healer implements player{
-	protected int hp = 4;
-	protected int ap = 1;
+	protected int hp = 12;
+	protected int ap = 3;
 	private String name = "Healer"; 
+	
+	public void special (int apEnnemy){
+		if (hp<=5){
+			System.out.println("You regain 3 hp.\n");
+			hp = hp + 3;
+		}
+		
+		else{
+			System.out.println("You're in too good shape.\n");
+		}
+	}
+	
 	
 	public int getHp() {
 		return hp;
