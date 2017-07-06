@@ -54,8 +54,28 @@ public class tank implements player{
 		return Sprite;
 	}
 
-	public void setSprite(String sprite) {
-		Sprite = sprite;
+	public void setSprite(String action) {
+		switch(action){
+		case "attack":
+			Sprite ="/tank attack.png";
+			break;
+		
+		case "block":
+			Sprite ="/tank block.png";
+			break;
+			
+		case "special":
+			Sprite = "/tank special.png";
+			break;
+			
+		case "dead":
+			Sprite = "/tank dead.png";
+			break;
+			
+		default :
+			Sprite = "/tank.png";
+			break;
+		}
 	}
 	
 	/*

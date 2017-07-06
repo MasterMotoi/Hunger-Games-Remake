@@ -19,6 +19,8 @@ public class contract extends JFrame{
 		build();
 		while (end == false){
 			end = fight.letsDance();
+			pan.setBoth(fight.getYou(), fight.getIa());
+			actualise();
 		}
 	}
 	
@@ -30,5 +32,9 @@ public class contract extends JFrame{
 		fen.setContentPane(pan);
 		fen.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		fen.setVisible(true);
+	}
+	
+	public void actualise(){
+		pan.repaint();
 	}
 }

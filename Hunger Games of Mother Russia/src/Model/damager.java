@@ -55,8 +55,28 @@ public class damager implements player{
 		return Sprite;
 	}
 
-	public void setSprite(String sprite) {
-		Sprite = sprite;
+	public void setSprite(String action) {
+		switch(action){
+		case "attack":
+			Sprite ="/damager attack.png";
+			break;
+		
+		case "block":
+			Sprite ="/damager block.png";
+			break;
+			
+		case "special":
+			Sprite = "/damager special.png";
+			break;
+			
+		case "dead":
+			Sprite = "/damager dead.png";
+			break;
+			
+		default :
+			Sprite = "/damager.png";
+			break;
+		}
 	}
 	
 	/*

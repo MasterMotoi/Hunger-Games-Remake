@@ -61,8 +61,28 @@ public class healer implements player{
 		return Sprite;
 	}
 
-	public void setSprite(String sprite) {
-		Sprite = sprite;
+	public void setSprite(String action) {
+		switch(action){
+		case "attack":
+			Sprite ="/healer attack.png";
+			break;
+		
+		case "block":
+			Sprite ="/healer block.png";
+			break;
+			
+		case "special":
+			Sprite = "/healer special.png";
+			break;
+			
+		case "dead":
+			Sprite = "/healer dead.png";
+			break;
+			
+		default :
+			Sprite = "/healer.png";
+			break;
+		}
 	}
 	
 	/*

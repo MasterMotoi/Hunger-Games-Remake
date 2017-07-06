@@ -21,6 +21,7 @@ public class jarvis {
 		
 		switch (actionIa){ // Test ia's action
 			case 0:  // 0, the enemy attack
+				friday.setSprite("attack");
 				System.out.println("The enemy attack\n"); // Warns the user
 				testAction = "block"; // Will be use to test if you block
 				if (action.equals(testAction)){ // If you block
@@ -35,6 +36,7 @@ public class jarvis {
 				break;
 			
 			case 1: // 1, the enemy block
+				friday.setSprite("block");
 				if (action.equals(testAction)){ // If you attacked
 					friday.setHp(friday.getHp() - friday.getDp()); // The enemy loose as much hp as his dp
 					action = ""; // Prevent you from attack a second time
@@ -43,6 +45,7 @@ public class jarvis {
 				break;
 			
 			case 2: // 2, the enemy use his special power if he isn't a tank
+				friday.setSprite("special");
 				System.out.println("The enemy uses his special power."); // Warns the user
 				friday.special(); // Execute ia's special attack
 				break;
@@ -61,10 +64,12 @@ public class jarvis {
 		if(you.getHp() <= 0){ // If you or the ia has no hp left, warn the system that the fight is over by setting 'end' on true and tell who died ?
 			end = true;
 			System.out.println("You died!");
+			you.setSprite("dead");
 		}
 		if(friday.getHp() <= 0){
 			end = true;
 			System.out.println("You killed the ennemy!");
+			friday.setSprite("dead");
 		}
 		return end;
 	}

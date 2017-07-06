@@ -36,14 +36,17 @@ public class battleFTW {
 		
 		case "attack": 
 			System.out.println("You attack the ennemy");
+			you.setSprite(choice);
 			break;
 		
 		case "block":
 			System.out.println("You block the attack of the ennemy");
+			you.setSprite(choice);
 			break;
 			
 		case "special": // If you want to execute the special attack
-			you.special(); // The System will execute the Special attack of your class 
+			you.special(); // The System will execute the Special attack of your class
+			you.setSprite(choice);
 			break;
 			
 		case "exit": // Hiden command to terminate the programm
