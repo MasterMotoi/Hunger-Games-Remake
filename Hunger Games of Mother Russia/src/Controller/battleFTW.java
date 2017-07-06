@@ -81,9 +81,9 @@ public class battleFTW {
 		
 	}
 	public String getYou() { // Setters for the name of your class and the ia's. Will be useful for the design
-		return you.getSprite();
+		return "image/player"+you.getSprite();
 	}
 	public String getIa() {
-		return ia.getSprite();
+		return "image/friday"+ia.getSprite();
 	}
 }

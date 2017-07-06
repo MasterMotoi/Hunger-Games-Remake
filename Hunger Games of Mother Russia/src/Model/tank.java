@@ -5,7 +5,7 @@ public class tank implements player{
 	protected int ap = 2; // The ap (attack point) are the damage you'll make when you attack
 	protected int dp = 0; // The dp (defense point) are the damage you'll take when you block an attack
 	private String name = "Tank";  // name is the name of the class
-	private String Sprite = "image/tank.png";
+	private String Sprite = "/tank.png";
 	
 	public void special () {
 		System.out.println("Nothing to see here, but you take no damage when you block\n"); // The special does nothing cause it's passive. The tank take no damage when he block an attack

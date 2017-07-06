@@ -5,7 +5,7 @@ public class damager implements player{
 	protected int ap = 3; // The ap (attack point) are the damage you'll make when you attack
 	protected int dp = 1; // The dp (defense point) are the damage you'll take when you block an attack
 	private String name = "Damager"; // name is the name of the class
-	private String Sprite = "image/damager.png";
+	private String Sprite = "/damager.png";
 	
 	public void special () {
 		this.ap ++ ; // Pass 1 turn, but gain 1 ap
