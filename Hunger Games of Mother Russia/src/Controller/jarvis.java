@@ -61,17 +61,21 @@ public class jarvis {
 		System.out.println("You have " + you.getHp() + " HP left."); // Warns the user
 		System.out.println("The ennemy have " + friday.getHp() + " HP left.\n"); // Warns the user
 		
-		if(you.getHp() <= 0){ // If you or the ia has no hp left, warn the system that the fight is over by setting 'end' on true and tell who died ?
+		if(you.getHp() <= 0){ // If you or the ia has no hp left, warn the system that the fight is over by setting 'end' on true and tell who died
 			end = true;
 			System.out.println("You died!");
 			you.setSprite("dead");
 		}
-		if(friday.getHp() <= 0){
+		
+		else if(friday.getHp() <= 0){
 			end = true;
 			System.out.println("You killed the ennemy!");
 			friday.setSprite("dead");
 		}
-		System.out.println("What do you want to do, attack, block or use your special power ?"); // Asks what you want to do
+		
+		else { // Else, it just asks you what you want to do
+			System.out.println("What do you want to do, attack, block or use your special power ?"); // Asks what you want to do
+		}
 		return end;
 	}
 

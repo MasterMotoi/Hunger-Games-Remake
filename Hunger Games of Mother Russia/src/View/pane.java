@@ -7,30 +7,22 @@ import javax.swing.JPanel;
 
 public class pane extends JPanel{
 	private static final long serialVersionUID = 1L;
-	public String spriteUser;
-	public String spriteFriday;
+	public String spriteUser; // The Sprite for player's image
+	public String spriteFriday; // The sprite for IA's image
 	
-	public void paintComponent (Graphics g){
-		Graphics2D g2d = (Graphics2D) g;
-		g2d.drawImage(truc("image/arene.png").getImage(), 0, 0, null);
-		g2d.drawImage(truc(spriteUser).getImage(), 40, 250, null);
-		g2d.drawImage(truc(spriteFriday).getImage(), 750, 250, null);
+	public void paintComponent (Graphics g){ // Method use to draw images
+		Graphics2D g2d = (Graphics2D) g; // Essential, don't work without
+		g2d.drawImage(truc("image/arene.png").getImage(), 0, 0, null); // Draw an arena at the origin point
+		g2d.drawImage(truc(spriteUser).getImage(), 40, 250, null); // Draw the player
+		g2d.drawImage(truc(spriteFriday).getImage(), 750, 250, null); // Draw the IA
 	}
 	
-	public ImageIcon truc (String path){
+	public ImageIcon truc (String path){ // Create temporally an ImageIcon with the right sprite 
 		ImageIcon test = new ImageIcon(path);
 		return test;
 	}
 
-	public void setSpriteUser(String spriteUser) {
-		this.spriteUser = spriteUser;
-	}
-
-	public void setSpriteFriday(String spriteFriday) {
-		this.spriteFriday = spriteFriday;
-	}
-
-	public void setBoth (String spriteUser, String spriteFriday){
+	public void setBoth (String spriteUser, String spriteFriday){ // Set the sprites
 		this.spriteUser = spriteUser;
 		this.spriteFriday = spriteFriday;
 	}

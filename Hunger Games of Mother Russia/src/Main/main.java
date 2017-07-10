@@ -1,12 +1,11 @@
 package Main;
 
-import java.util.Scanner;
 import Contract.*;
 
 public class main {
 
 	public static void main(String[] args) {
-	contract launcher = new contract();
-	launcher.start();
+	contract launcher = new contract(); // Create the program
+	launcher.start(); // Launch it
 	}
 }

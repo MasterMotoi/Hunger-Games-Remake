@@ -4,29 +4,24 @@ import java.util.Scanner;
 import Model.*;
 
 public class battleFTW {
-	private String choice = "lol"; // This variable will take everything the user will write in the console
 	Scanner sc = new Scanner(System.in); // Essential if you want to make a Scanner
 	player you; // Create an object for your class even if the code don't know what you'll play
 	player ia; // Create an object for the class of the ia even if the code don't know what he'll play
 	private boolean end = false; // Will be use to terminate the program when needed
 	jarvis friday = new jarvis(); // Create the ia
-	private int next = 0;
-	private int testNext;
-	private boolean testEnd = false;
+	private int next = 0; // The variable contract will use to launch the next step
+	private int testNext; // Will be use to tes Next
 
 	public void letsDance(String choice){ // Method which let you choose your action (attack, block or special)
 
-
-		switch (choice) { // test your answer
+		switch (choice) { // test your choice
 		
-		// If you want to attack or block, the system will just print your choice and save your answer for now
-		
-		case "attack": 
+		case "attack":  // Attack if you clicked  the button attack
 			System.out.println("You attack the ennemy");
 			you.setSprite(choice);
 			break;
 		
-		case "block":
+		case "block": // Same for the blockage
 			System.out.println("You block the attack of the ennemy");
 			you.setSprite(choice);
 			break;
@@ -41,7 +36,6 @@ public class battleFTW {
 	}
 	
 	public void choix (String i){ // Method which load the class you chosen
-
 			switch (i){ // Test your answer
 			
 			case "damager": // If you want the damager
@@ -58,7 +52,7 @@ public class battleFTW {
 			}
 	}
 		
-	public void choixIa (String i){
+	public void choixIa (String i){ // Method which load the class you chosen for the ia
 		switch (i){ // Test your answer
 		
 		case "damager": // If you want the ia to be a damager
@@ -78,32 +72,17 @@ public class battleFTW {
 	public String getSpriteYou() { // Setters and getters
 		return "image/player"+you.getSprite();
 	}
+	
 	public String getSpriteIa() {
 		return "image/friday"+ia.getSprite();
-	}
-
-	public String getChoice() {
-		return choice;
-	}
-
-	public void setChoice(String choice) {
-		this.choice = choice;
 	}
 
 	public player getYou() {
 		return you;
 	}
 
-	public void setYou(player you) {
-		this.you = you;
-	}
-
 	public player getIa() {
 		return ia;
-	}
-
-	public void setIa(player ia) {
-		this.ia = ia;
 	}
 
 	public int getNext() {
@@ -125,8 +104,5 @@ public class battleFTW {
 	public void setTestNext(int testNext) {
 		this.testNext = testNext;
 	}
-	
-	public boolean getTestEnd(){
-		return testEnd;
-	}
+
 }
