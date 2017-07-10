@@ -71,6 +71,7 @@ public class jarvis {
 			System.out.println("You killed the ennemy!");
 			friday.setSprite("dead");
 		}
+		System.out.println("What do you want to do, attack, block or use your special power ?"); // Asks what you want to do
 		return end;
 	}
 
