@@ -1,1 +1,1 @@
-# Hunger-Games-of-Mother-Russia
+# Hunger-Games-Remake
